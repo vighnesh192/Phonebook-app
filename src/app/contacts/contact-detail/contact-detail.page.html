@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-back-button defaultHref="/contacts" slot="start" color="light"></ion-back-button>
+    <ion-title>{{ loadedContact.name }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onDeleteContact()">
+        <ion-icon name="trash" slot="icon-only" ></ion-icon>
+      </ion-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+        <ion-img [src]="loadedContact.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1> {{ loadedContact.name }} </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3> {{ loadedContact.contactNo }} </h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
